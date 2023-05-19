@@ -1,0 +1,16 @@
+print("Ingrese numero a")
+a = int(input())
+print("Ingrese numero b")
+b = int(input())
+print("Ingrese numero c")
+c = int(input())
+print("Ingrese numero d")
+d = int(input())
+print("Ingrese numero e")
+e = int(input())
+print("Ingresen numero f")
+f = int(input())
+
+resultado =(a + b/c)/(d + e/f)
+
+print("El resultado es:", resultado)

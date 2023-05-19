@@ -1,0 +1,179 @@
+m=[[1,2,3,4,5,6],[7,8,9,10,11,12],[13,14,15,16,17,18],[19,20,21,22,23,24],[25,26,27,28,29,30],[31,32,33,34,35,36],[37,38,39,40,41,42]]
+
+Asiento_normal=78900
+Asiento_vip=240000
+
+while True:
+    print("**********" "Menu" "**********")
+    print()
+    print("1. Ver Asientos Disponibles")
+    print("2. Comprar asiento")
+    print("3. Anular vuelo")
+    print("4. Modificar pasajero")
+    print("5. Salir")
+    opcion=(int(input()))
+
+    if(opcion==1):
+
+        print("Estos son los asientos disponibles")
+        print("Asientos normales: 1-30  || Asientos VIP: 31-42")
+        print()
+        for f in range(7):
+            for c in range(6):
+                print(m[f][c],end=' ')
+            print()
+        
+    elif(opcion==2):
+
+        print("Nombre del pasajero: ")
+        nombrePasajero=input()
+        print("Rut: ")
+        rutPasajero=input()
+        print("Telefono: ")
+        telefonoPasajero=input()
+        print("Banco: ")
+        bancoPasajero=input()
+
+        print("Que asiento desea tomar: ")
+        asiento=(int(input()))
+
+        if(asiento==1):
+            m[0][0]='X'
+        elif(asiento==2):
+            m[0][1]='X'
+        elif(asiento==3):
+            m[0][2]='X'
+        elif(asiento==4):
+            m[0][3]='X'
+        elif(asiento==5):
+            m[0][4]='X'  
+        elif(asiento==6):
+            m[0][5]='X'
+        elif(asiento==7):
+            m[1][0]='X'
+        elif(asiento==8):
+            m[1][1]='X'
+        elif(asiento==9):
+            m[1][2]='X'           
+        elif(asiento==10):
+            m[1][3]='X'
+        elif(asiento==11):
+            m[1][4]='X'
+        elif(asiento==12):
+            m[1][5]='X'
+        elif(asiento==13):
+            m[2][0]='X'         
+        elif(asiento==14):
+            m[2][1]='X'
+        elif(asiento==15):
+            m[2][2]='X'
+        elif(asiento==16):
+            m[2][3]='X'
+        elif(asiento==17):
+            m[2][4]='X'                 
+        elif(asiento==18):
+            m[2][5]='X'
+        elif(asiento==19):
+            m[3][0]='X'
+        elif(asiento==20):
+            m[3][1]='X'
+        elif(asiento==21):
+            m[3][2]='X'             
+        elif(asiento==22):
+            m[3][3]='X'
+        elif(asiento==23):
+            m[3][4]='X'
+        elif(asiento==24):
+            m[3][5]='X'
+        elif(asiento==25):
+            m[4][0]='X' 
+        elif(asiento==26):
+            m[4][1]='X'
+        elif(asiento==27):
+            m[4][2]='X'
+        elif(asiento==28):
+            m[4][3]='X'
+        elif(asiento==29):
+            m[4][4]='X'
+        elif(asiento==30):
+            m[4][5]='X'
+        elif(asiento==31):
+            m[5][0]='X'
+        elif(asiento==32):
+            m[5][1]='X'
+        elif(asiento==33):
+            m[5][2]='X' 
+        elif(asiento==34):
+            m[5][3]='X'
+        elif(asiento==35):
+            m[5][4]='X'
+        elif(asiento==36):
+            m[5][5]='X'
+        elif(asiento==37):
+            m[6][0]='X' 
+        elif(asiento==38):
+            m[6][1]='X'
+        elif(asiento==39):
+            m[6][2]='X'
+        elif(asiento==40):
+            m[6][3]='X'
+        elif(asiento==41):
+            m[6][4]='X'  
+        elif(asiento==42):
+            m[6][5]='X'                              
+
+        if(0<asiento<31):
+            if(bancoPasajero=='bancoDuoc'):
+                
+                print("Usted posee un descuento del 15% por ser de bancoDuoc")
+                print(f"El monto es de {Asiento_normal-Asiento_normal*0.15}")
+                print("Desea confirmar su compra?")
+                print("1=Si 0=No")
+                op1=(int(input()))
+
+                if(op1==1):
+                    print("Gracias por su compra")
+                elif(op1==0):
+                    print("XD") 
+
+            else:    
+                print(f"El monto es de {Asiento_normal}")
+                print("Desea confirmar su compra?")
+                print("1=Si 0=No")
+                op1=(int(input()))
+
+                if(op1==1):
+                    print("Gracias por su compra")
+                elif(op1==0):
+                    print("XD")
+        elif(31<=asiento<=42):
+
+            if(bancoPasajero=='bancoDuoc'):
+                
+                print("Usted posee un descuento del 15% por ser de bancoDuoc")
+                print(f"El monto es de {Asiento_vip-Asiento_vip*0.15}")
+                print("Desea confirmar su compra?")
+                print("1=Si 0=No")
+                op1=(int(input()))
+
+                if(op1==1):
+                    print("Gracias por su compra")
+                elif(op1==0):
+                    print("XD") 
+
+            else:    
+                print(f"El monto es de {Asiento_vip}")
+                print("Desea confirmar su compra?")
+                print("1=Si 0=No")
+                op1=(int(input()))
+
+                if(op1==1):
+                    print("Gracias por su compra")
+                elif(op1==0):
+                    print("XD")
+
+    
+
+
+
+
